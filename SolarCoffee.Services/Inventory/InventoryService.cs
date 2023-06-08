@@ -17,7 +17,7 @@ namespace SolarCoffee.Services.Inventory {
         }
         
         /// <summary>
-        /// Returns all current inventory from the database
+        /// Vraca sve inventory-e iz baze
         /// </summary>
         /// <returns></returns>
         public List<ProductInventory> GetCurrentInventory() {
@@ -28,11 +28,11 @@ namespace SolarCoffee.Services.Inventory {
         }
 
         /// <summary>
-        /// Updates number of units available of the provided product id
-        /// Adjusts QuantityOnHand by adjustment value
+        /// Update-uje broj proizvoda koji su dostupni u inventory-u
+        /// QuantityOnHand se moze prilagoditi preko adjustment vrednosti
         /// </summary>
         /// <param name="id">productId</param>
-        /// <param name="adjustment">number of units added / removed from inventory</param>
+        /// <param name="adjustment">broj dodatih jedinica / brisanje iz inventory-a</param>
         /// <returns></returns>
         public ServiceResponse<ProductInventory> UpdateUnitsAvailable(int id, int adjustment) {
             var now = DateTime.UtcNow;
@@ -74,7 +74,7 @@ namespace SolarCoffee.Services.Inventory {
         }
 
         /// <summary>
-        /// Gets a ProductInventory instance by Product ID
+        /// Uzima ProductInventory instancu preko indentifikatora Proizvoda
         /// </summary>
         /// <param name="productId"></param>
         /// <returns></returns>
@@ -85,7 +85,7 @@ namespace SolarCoffee.Services.Inventory {
         }
 
         /// <summary>
-        /// Return Snapshot history for the previous 6 hours
+        /// Vraca Snapshot za proslih 6 sati
         /// </summary>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
@@ -101,7 +101,7 @@ namespace SolarCoffee.Services.Inventory {
         }
         
         /// <summary>
-        /// Creates a Snapshot record using the provided ProductInventory instance
+        /// Pravi Snapshot koristeci ProductInventory instancu
         /// </summary>
         private void CreateSnapshot() {
             var now = DateTime.UtcNow;

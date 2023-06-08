@@ -14,7 +14,7 @@ namespace SolarCoffee.Services.Customer {
         }
         
         /// <summary>
-        /// Returns a list of Customers from the database
+        /// Vraca listu Customers iz baze
         /// </summary>
         /// <returns>List<Customer></returns>
         public List<Data.Models.Customer> GetAllCustomers() {
@@ -25,9 +25,9 @@ namespace SolarCoffee.Services.Customer {
         }
 
         /// <summary>
-        /// Adds a new Customer record
+        /// Dodaje novog Customer-a
         /// </summary>
-        /// <param name="customer">Customer instance</param>
+        /// <param name="customer">Customer instanca</param>
         /// <returns>ServiceResponse<Customer></returns>
         public ServiceResponse<Data.Models.Customer> CreateCustomer(Data.Models.Customer customer) {
             try {
@@ -52,9 +52,9 @@ namespace SolarCoffee.Services.Customer {
         }
 
         /// <summary>
-        /// Deletes a customer record
+        /// Brise Customer-a
         /// </summary>
-        /// <param name="id">int customer primary key</param>
+        /// <param name="id">int customer privatni kljuc</param>
         /// <returns>ServiceResponse<bool></returns>
         public ServiceResponse<bool> DeleteCustomer(int id) {
             var customer = _db.Customers.Find(id);
@@ -94,7 +94,7 @@ namespace SolarCoffee.Services.Customer {
         /// <summary>
         /// Gets a customer record by primary key
         /// </summary>
-        /// <param name="id">int customer primary key</param>
+        /// <param name="id">int customer privatni kljuc</param>
         /// <returns>Customer</returns>
         public Data.Models.Customer GetById(int id) {
             return _db.Customers.Find(id);

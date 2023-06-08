@@ -5,7 +5,7 @@ using SolarCoffee.Web.ViewModels;
 namespace SolarCoffee.Web.Serialization {
     public static class CustomerMapper {
         /// <summary>
-        /// Serializes a Customer data model into a CustomerModel view model
+        /// Serializuje Customer data model u CustomerModel view model
         /// </summary>
         /// <param name="customer"></param>
         /// <returns></returns>
@@ -21,7 +21,7 @@ namespace SolarCoffee.Web.Serialization {
         }
 
         /// <summary>
-        /// Serializes a CustomerModel view model into a Customer data model
+        /// Serializuje CustomerModel view model u Customer data model
         /// </summary>
         /// <param name="customer"></param>
         /// <returns></returns>
@@ -36,7 +36,7 @@ namespace SolarCoffee.Web.Serialization {
         }
         
         /// <summary>
-        /// Maps a CustomerAddress data model to a CustomerAddressModel view model
+        /// Mapira CustomerAddress data model u CustomerAddressModel view model
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>
@@ -55,7 +55,7 @@ namespace SolarCoffee.Web.Serialization {
         }
         
         /// <summary>
-        /// Maps a CustomerAddressModel view model to a CustomerAddress data model
+        /// Mapira CustomerAddressModel view model u CustomerAddress data model
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>

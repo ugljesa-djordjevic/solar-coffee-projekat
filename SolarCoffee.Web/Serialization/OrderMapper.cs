@@ -6,12 +6,12 @@ using SolarCoffee.Web.ViewModels;
 
 namespace SolarCoffee.Web.Serialization {
     /// <summary>
-    /// Handles mapping Order data models to and from related View Models
+    /// Mapira Order data modele u i iz povezanih View Modela
     /// </summary>
     public static class OrderMapper {
         
         /// <summary>
-        /// Maps an InvoiceModel view model to a SalesOrder data model
+        /// Mapira InvoiceModel view model u SalesOrder data model
         /// </summary>
         /// <param name="invoice"></param>
         /// <returns></returns>
@@ -31,7 +31,7 @@ namespace SolarCoffee.Web.Serialization {
         }
 
         /// <summary>
-        /// Maps a collection of SalesOrders (data) to OrderModels (view models)
+        /// Mapira kolekciju SalesOrders (data) u OrderModels (view models)
         /// </summary>
         /// <param name="orders"></param>
         /// <returns></returns>
@@ -47,7 +47,7 @@ namespace SolarCoffee.Web.Serialization {
         }
 
         /// <summary>
-        /// Maps a collection of SalesOrderItems (data) to SalesOrderItemModels (view models)
+        /// Mapira kolekciju SalesOrderItems (data) u SalesOrderItemModels (view models)
         /// </summary>
         /// <param name="orderItems"></param>
         /// <returns></returns>

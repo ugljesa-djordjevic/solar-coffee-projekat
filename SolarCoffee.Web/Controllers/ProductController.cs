@@ -18,7 +18,7 @@ namespace SolarCoffee.Web.Controllers {
         }
 
         /// <summary>
-        /// Adds a new product
+        /// Dodaje proizvod
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
@@ -34,7 +34,7 @@ namespace SolarCoffee.Web.Controllers {
         }
 
         /// <summary>
-        /// Returns all products
+        /// Vraca sve proizvode
         /// </summary>
         /// <returns></returns>
         [HttpGet("/api/product")]
@@ -47,7 +47,7 @@ namespace SolarCoffee.Web.Controllers {
         }
 
         /// <summary>
-        /// Archives an existing product
+        /// Arhivira postojece proizvode
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

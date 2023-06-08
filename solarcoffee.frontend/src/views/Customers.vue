@@ -17,22 +17,22 @@
         <th>Since</th>
         <th>Delete</th>
       </tr>
-      <tr v-for="customer in customers">
+      <tr v-for="(customer, index) in customers" :key="index">
         <td>
           {{ customer.firstName + " " + customer.lastName }}
         </td>
         <td>
           {{
-            customer.primaryAddress.addressLine1 +
+            customer.primaryAddress?.addressLine1 +
               " " +
-              customer.primaryAddress.addressLine2
+              customer.primaryAddress?.addressLine2
           }}
         </td>
         <td>
-          {{ customer.primaryAddress.state }}
+          {{ customer.primaryAddress?.state }}
         </td>
         <td>
-          {{ customer.createdOn | humanizeDate }}
+          {{ customer.createdOn }}
         </td>
         <td>
           <div
@@ -52,6 +52,7 @@
 </template>
 
 <script lang="ts">
+//@ts-nocheck
 import { Component, Vue } from "vue-property-decorator";
 import { ICustomer } from "@/types/Customer";
 import SolarButton from "@/components/SolarButton.vue";

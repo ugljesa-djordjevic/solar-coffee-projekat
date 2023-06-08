@@ -4,7 +4,7 @@ namespace SolarCoffee.Web.Serialization {
     public static class ProductMapper {
         
         /// <summary>
-        /// Maps a Product data model to a ProductModel view model
+        /// Mapira Product data model u ProductModel view model
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
@@ -22,7 +22,7 @@ namespace SolarCoffee.Web.Serialization {
         }
         
         /// <summary>
-        /// Maps a ProductModel view model to a Product data model
+        /// Mapira ProductModel view model u Product data model
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>

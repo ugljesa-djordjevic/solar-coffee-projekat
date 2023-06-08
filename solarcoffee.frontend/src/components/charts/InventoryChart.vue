@@ -27,10 +27,10 @@ Vue.component('apexchart', VueApexCharts)
 })
 export default class InventoryChart extends Vue {
   @Sync("snapshotTimeline")
-  snapshotTimeline: IInventoryTimeline;
+  snapshotTimeline!: IInventoryTimeline;
 
   @Get("isTimelineBuilt")
-  isTimelineBuilt: boolean;
+  isTimelineBuilt!: boolean;
 
   get options() {
       console.log(this.snapshotTimeline)

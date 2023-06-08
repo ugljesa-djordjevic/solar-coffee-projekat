@@ -37,7 +37,7 @@
           {{ item.quantityOnHand }}
         </td>
         <td>
-          {{ item.product.price | price }}
+          {{ item.product.price }} <!-- | price -->
         </td>
         <td>
           <span v-if="item.product.isTaxable">

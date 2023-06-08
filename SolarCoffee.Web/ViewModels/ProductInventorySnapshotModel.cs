@@ -11,7 +11,7 @@ namespace SolarCoffee.Web.ViewModels {
     }
     
     /// <summary>
-    /// Snapshot history in format suitable for graphing
+    /// Snapshot history
     /// </summary>
     public class SnapshotResponse {
         public List<ProductInventorySnapshotModel> ProductInventorySnapshots { get; set; }

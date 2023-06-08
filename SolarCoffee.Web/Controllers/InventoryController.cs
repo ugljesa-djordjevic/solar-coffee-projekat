@@ -64,13 +64,11 @@ namespace SolarCoffee.Web.Controllers {
             try {
                 var snapshotHistory = _inventoryService.GetSnapshotHistory();
                 
-                // Get distinct points in time a snapshot was collected
                 var timelineMarkers = snapshotHistory 
                     .Select(t => t.SnapshotTime)
                     .Distinct()
                     .ToList();
                 
-                // Get quantities grouped by id.
                 var snapshots = snapshotHistory
                     .GroupBy(hist => hist.Product, hist => hist.QuantityOnHand,
                         (key, g) => new ProductInventorySnapshotModel {

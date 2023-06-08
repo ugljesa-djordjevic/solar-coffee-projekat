@@ -14,7 +14,7 @@ namespace SolarCoffee.Services.Product {
         }
         
         /// <summary>
-        /// Retrieves all Product from the database
+        /// Uzima sve podatke iz baze
         /// </summary>
         /// <returns></returns>
         public List<Data.Models.Product> GetAllProducts() {
@@ -22,7 +22,7 @@ namespace SolarCoffee.Services.Product {
         }
 
         /// <summary>
-        /// Retrieves a Product from the database by primary key
+        /// Uzima podatke iz baze po privatnom kljucu
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -31,7 +31,7 @@ namespace SolarCoffee.Services.Product {
         }
 
         /// <summary>
-        /// Adds a new product to the database
+        /// Dodaje proizvod u bazu
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
@@ -68,7 +68,7 @@ namespace SolarCoffee.Services.Product {
         }
 
         /// <summary>
-        /// Archives a Product by setting boolean IsArchived to true
+        /// Arhivira proizvode u bazu
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

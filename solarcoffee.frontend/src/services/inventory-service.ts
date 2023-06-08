@@ -5,7 +5,7 @@ import {IInventoryTimeline} from "@/types/InventoryGraph";
 
 /**
  * Inventory Service.
- * Provides UI business logic associated with product inventory
+ * Logika za rad sa product inventory
  */
 export class InventoryService {
   API_URL = process.env.VUE_APP_API_URL;

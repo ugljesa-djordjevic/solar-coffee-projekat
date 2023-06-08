@@ -21,7 +21,7 @@
             {{ order.id }}
           </td>
           <td>
-            {{ getTotal(order) | price }}
+            {{ getTotal(order)}} <!--  | price -->
           </td>
           <td :class="{ green: order.isPaid }">
             {{ getStatus(order.isPaid) }}
@@ -40,6 +40,7 @@
 </template>
 
 <script lang="ts">
+//@ts-nocheck
 import { Component, Vue } from "vue-property-decorator";
 import { OrderService } from "@/services/order-service";
 import { ISalesOrder } from "@/types/SalesOrder";

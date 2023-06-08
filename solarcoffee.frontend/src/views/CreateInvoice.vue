@@ -54,7 +54,7 @@
       <div class="invoice-order-list" v-if="lineItems.length">
         <div class="runningTotal">
           <h3>Running Total:</h3>
-          {{ runningTotal | price }}
+          {{ runningTotal }} <!--  | price -->
         </div>
         <hr />
         <table class="table">
@@ -69,13 +69,13 @@
           </thead>
           <tr
             v-for="lineItem in lineItems"
-            :key="`index_${lineItem.product.id}`"
+            :key="`index_${lineItem.product?.id}`"
           >
-            <td>{{ lineItem.product.name }}</td>
-            <td>{{ lineItem.product.description }}</td>
+            <td>{{ lineItem.product?.name }}</td>
+            <td>{{ lineItem.product?.description }}</td>
             <td>{{ lineItem.quantity }}</td>
-            <td>{{ lineItem.product.price }}</td>
-            <td>{{ (lineItem.product.price * lineItem.quantity) | price }}</td>
+            <td>{{ lineItem.product?.price }}</td>
+            <td>{{ (lineItem.product.price * lineItem.quantity) }}</td> <!-- | price -->
           </tr>
         </table>
       </div>
@@ -135,14 +135,14 @@
               </thead>
               <tr
                 v-for="lineItem in lineItems"
-                :key="`index_${lineItem.product.id}`"
+                :key="`index_${lineItem.product?.id}`"
               >
-                <td>{{ lineItem.product.name }}</td>
-                <td>{{ lineItem.product.description }}</td>
+                <td>{{ lineItem.product?.name }}</td>
+                <td>{{ lineItem.product?.description }}</td>
                 <td>{{ lineItem.quantity }}</td>
-                <td>{{ lineItem.product.price }}</td>
+                <td>{{ lineItem.product?.price }}</td>
                 <td>
-                  {{ (lineItem.product.price * lineItem.quantity) | price }}
+                  {{ (lineItem.product.price * lineItem.quantity) }} <!-- | price -->
                 </td>
               </tr>
               <tr>
@@ -152,7 +152,7 @@
               <tfoot>
                 <tr>
                   <td colspan="4" class="due">Balance due upon receipt:</td>
-                  <td class="price-final">{{ runningTotal | price }}</td>
+                  <td class="price-final">{{ runningTotal }}</td> <!-- | price -->
                 </tr>
               </tfoot>
             </table>
@@ -175,6 +175,7 @@
 </template>
 
 <script lang="ts">
+//@ts-nocheck
 import { Component, Vue } from "vue-property-decorator";
 import { IInvoice, ILineItem } from "@/types/IInvoice";
 import { ICustomer } from "@/types/Customer";
@@ -183,7 +184,7 @@ import CustomerService from "@/services/customer-service";
 import { InventoryService } from "@/services/inventory-service";
 import InvoiceService from "@/services/invoice-service";
 import SolarButton from "@/components/SolarButton.vue";
-// noinspection TypeScriptCheckImport
+//@ts-ignore
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
@@ -285,7 +286,7 @@ export default class CreateInvoice extends Vue {
   }
 
   startOver(): void {
-    this.invoice = { customerId: 0, lineItems: [] };
+    this.invoice = { customerId: 0, lineItems: [], createdOn: Date.now(), updatedOn: Date.now() };
     this.invoiceStep = 1;
   }
 
@@ -326,8 +327,6 @@ export default class CreateInvoice extends Vue {
   width: 100%;
 }
 
-.invoice-step {
-}
 .invoice-step-detail {
   margin: 1.2rem;
 }

@@ -29,7 +29,7 @@ namespace SolarCoffee.Services.Order {
         }
         
         /// <summary>
-        /// Gets all SalesOrders in the system
+        /// Uzima sve SalesOrders u sistemu
         /// </summary>
         /// <returns></returns>
         public List<SalesOrder> GetOrders() {
@@ -42,7 +42,7 @@ namespace SolarCoffee.Services.Order {
         }
 
         /// <summary>
-        /// Creates an open SalesOrder
+        /// Pravi novi SalesOrder
         /// </summary>
         /// <param name="order"></param>
         /// <returns></returns>
@@ -83,7 +83,7 @@ namespace SolarCoffee.Services.Order {
         }
 
         /// <summary>
-        /// Marks an open SalesOrder as paid
+        /// Oznacava da je SalesOrder palcen
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
